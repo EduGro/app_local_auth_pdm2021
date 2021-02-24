@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:local_auth_example/circular_action.dart';
 
 import 'bloc/profile_bloc.dart';
 
@@ -54,9 +55,21 @@ class _ProfileState extends State<Profile> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CircleAvatar(),
-                    CircleAvatar(),
-                    CircleAvatar(),
+                    CircularAction(
+                      textAction: "Ver tarjeta",
+                      iconData: Icons.credit_card,
+                      bgColor: Color(0xff123b5e),
+                    ),
+                    CircularAction(
+                      textAction: "Cambiar foto",
+                      iconData: Icons.camera_alt,
+                      bgColor: Colors.orange,
+                    ),
+                    CircularAction(
+                      textAction: "Ver tutorial",
+                      iconData: Icons.play_arrow,
+                      bgColor: Colors.green,
+                    ),
                   ],
                 ),
                 SizedBox(height: 48),
